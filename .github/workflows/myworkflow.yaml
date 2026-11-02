@@ -3,3 +3,14 @@ on:
   push:
     branches:
      - princebranch
+  workflow_dispatch:
+jobs:
+  myjob1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: mystep1
+        run: |
+          whoami
+          pwd
+          cd
+          ls -al
