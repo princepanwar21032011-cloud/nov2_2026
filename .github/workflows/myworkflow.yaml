@@ -29,3 +29,8 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PAT }}
       - name: mystep7-push image to docker hub
         run: docker push princepanwar21032011/myimage_nov_2:t${{ github.run_number }}
+      - name: mystep8-login to remote server
+        run: |
+          sshpass -p 'Anil@332211' ssh \
+          -o StrictHostKeyChecking=accept-new \
+          root@164.68.105.85 \
