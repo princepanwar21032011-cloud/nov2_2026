@@ -27,3 +27,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PAT }}
+      - name: mystep7-push image to docker hub
+        run: docker push princepanwar21032011/myimage_nov_2:t${{ github.run_number }}
